@@ -10,11 +10,13 @@ function App() {
 	return (
 		<>
 			<Nav />
-			<Route exact path='/'>
-				<Home />
-			</Route>
-			<Route exact path='/theteam' component={Team} />
-			<Route exact path='/about' component={About} />
+			<Switch>
+				<Route exact path='/'>
+					<Home />
+				</Route>
+				<Route path='/theteam' component={Team} />
+				<Route path='/about' component={About} />
+			</Switch>
 			{/*form with go here with route to that*/}
 			<Footer />
 		</>
