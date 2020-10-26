@@ -6,6 +6,7 @@ import Nav from '../src/components/navbar'
 import Footer from '../src/components/footer'
 import About from '../src/components/about'
 import Team from '../src/components/team'
+import Form from '../src/components/form'
 
 
 function App() {
@@ -18,6 +19,9 @@ function App() {
 				</Route>
 				<Route path='/theteam' component={Team} />
 				<Route path='/about' component={About} />
+				<Route path='/create'>
+					<Form />
+				</Route>
 			</Switch>
 			{/*form with go here with route to that*/}
 			<Footer />
