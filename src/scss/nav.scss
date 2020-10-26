@@ -1,0 +1,16 @@
+@import './_config.scss';
+
+nav {
+    background-color: $yellowOchre;
+    height: 100%;
+    ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    .link {
+        text-decoration: none;
+        color: $coolGrey;
+    }
+}
+}
