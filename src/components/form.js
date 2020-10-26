@@ -3,7 +3,7 @@ import '../scss/form.scss';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
-function Footer() {
+function Footer(props) {
 	const [addFood, setAddFood] = useState({});
 	const [state, setState] = useState({
 		mood: '',
