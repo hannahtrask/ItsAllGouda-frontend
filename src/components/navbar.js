@@ -19,6 +19,9 @@ const Nav = (props) => {
 					<Link to='/about' className='link'>
 						<li>about the app</li>
 					</Link>
+					<Link to='/create' className='link'>
+						<li>create new food</li>
+					</Link>
 				</ul>
 			</nav>
 		);
