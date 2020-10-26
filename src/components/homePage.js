@@ -1,7 +1,7 @@
 import React from "react";
 import Dropdown from "react-bootstrap/Dropdown";
 
-function homePage() {
+function Home() {
   console.log("hello homePage");
   return (
     <>
@@ -22,4 +22,4 @@ function homePage() {
   );
 }
 
-export default homePage;
+export default Home;
