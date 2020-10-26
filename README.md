@@ -49,7 +49,7 @@ const moodSchema = new Schema ({
 
 ### App Structure
 
-- [React Architecture](https://res.cloudinary.com/digwu4vdh/image/upload/v1603475536/Unit_3_Project_-_It_s_All_Gouda_pstold.png)
+- [React Architecture](https://res.cloudinary.com/digwu4vdh/image/upload/v1603739268/reactarchitecture_pqnfbq.png)
 
 ### Wireframes
 
