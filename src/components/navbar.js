@@ -6,7 +6,7 @@ const Nav = (props) => {
   return (
     <nav>
       <ul>
-        <Link to="/" className="homelink">
+        <Link to="/" className="link">
           <img
             className="adorable"
             src="https://i.ibb.co/HPDXXRJ/GOUDAA.png"
