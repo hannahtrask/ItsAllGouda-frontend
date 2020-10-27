@@ -1,0 +1,39 @@
+h2 {
+  color: #f7fff7;
+}
+
+h3 {
+  color: #ff6b6b;
+}
+
+p {
+  color: #4ecdc4;
+}
+
+.kilah {
+  height: 180px;
+  width: 180px;
+}
+
+.chase {
+  height: 180px;
+  width: 180px;
+}
+
+.hannah {
+  height: 180px;
+  width: 180px;
+}
+
+.sara {
+  height: 180px;
+  width: 180px;
+}
+
+div.chaseandthegals {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  /* grid-template-rows: 1fr 1fr 1fr; */
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 10px;
+}
