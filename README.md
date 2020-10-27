@@ -119,7 +119,7 @@ Below is a link to our wireframe, we'll adjust this to be responsive as we devel
 
 ## Additional Libraries
 
-  - [additional library](additional library link)
+  - [Contentful](https://www.contentful.com/get-started/)
   - [additional library](additional library link)
 
 ## Code Snippet
