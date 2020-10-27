@@ -36,8 +36,10 @@ function Home(props) {
 			<h1>It's all Gouda</h1>
 			<h2>Quarantine Food Picker</h2>
 			<img
-				src='https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQwPonxJBPD62Mz4zFtjrxrEBTsrM2DaVbLdA&usqp=CAU'
-				alt=''></img>
+				src='https://i.ibb.co/D5ZkY8D/luke-southern-4-GShi-SQpcg-unsplash.jpg'
+				alt='luke-southern-4-GShi-SQpcg-unsplash'
+				border='0'
+			/>
 			<Form>
 				<Form.Group controlId='exampleForm.ControlSelect1'>
 					<Form.Label>How you Feelin'?</Form.Label>
