@@ -1,5 +1,6 @@
-h2 {
+.kilahname {
   color: #f7fff7;
+  font-family: "Sigmar One", cursive;
 }
 
 h3 {
@@ -30,10 +31,12 @@ p {
   width: 180px;
 }
 
-div.chaseandthegals {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  /* grid-template-rows: 1fr 1fr 1fr; */
-  grid-template-rows: repeat(3, 1fr);
-  grid-gap: 10px;
+div.chaseandgals {
+  margin: 10px;
+  padding: 20px;
+  //   display: grid;
+  //   grid-template-columns: 2fr 1fr 1fr;
+  //   /* grid-template-rows: 1fr 1fr 1fr; */
+  //   grid-template-rows: repeat(3, 1fr);
+  //   grid-gap: 10px;
 }
