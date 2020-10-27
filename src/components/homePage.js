@@ -5,8 +5,7 @@ import '../scss/homepage.scss';
 import Display from './displayFoods';
 
 function Home(props) {
-	const url = 'http://localhost:4000/gouda';
-	// const url = 'https://its-all-gouda-backend.herokuapp.com';
+	const url = 'https://its-all-gouda-backend.herokuapp.com/gouda';
 
 	const [initialMood, setInitialMood] = useState('happy');
 	const [mood, setMood] = useState([]);
