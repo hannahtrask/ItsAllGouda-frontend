@@ -7,6 +7,7 @@ import Display from './displayFoods';
 function Home(props) {
 	const url = 'https://its-all-gouda-backend.herokuapp.com/gouda';
 
+
 	const [initialMood, setInitialMood] = useState('happy');
 	const [mood, setMood] = useState([]);
 	// const [dropdownOpen, setDropdownOpen] = React.useState(false);
@@ -52,6 +53,7 @@ function Home(props) {
 			<Display mood={mood} />
 		</div>
 	);
+
 }
 
 export default Home;

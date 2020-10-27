@@ -1,16 +1,33 @@
-@import './_config.scss';
+@import "./_config.scss";
 
 nav {
-    background-color: $yellowOchre;
-    height: 100%;
-    ul {
+  background-color: #292f36;
+  height: 50%;
+  //   margin-right: -40px;
+  //   max-width: 100%;
+  ul {
     display: flex;
     justify-content: space-around;
     align-items: center;
     list-style: none;
-    .link {
-        text-decoration: none;
-        color: $coolGrey;
+    padding: 0px;
+    font-size: 17px;
+    height: 50%;
+
+    .homeLink {
+      padding: 0;
+      position: relative;
     }
-}
+
+    .adorable {
+      height: 30%;
+      width: 30%;
+      padding: 0px;
+    }
+
+    .link {
+      text-decoration: none;
+      color: white;
+    }
+  }
 }
