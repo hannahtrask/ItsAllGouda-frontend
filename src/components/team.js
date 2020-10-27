@@ -6,17 +6,17 @@ const Team = () => {
     <div className="chaseandgals">
       <h2 className="kilahname">Kilah</h2>
       <h3>Backend Baller</h3>
-      <img src="" />
+      <img className="kilah" src="" />
       <p>words words more words, food puns</p>
-      <h2>Hannah</h2>
+      <h2 className="kilahname">Hannah</h2>
       <h3>Frontend Phenom</h3>
       <img className="hannah" src=""></img>
       <p>words words more words, food puns</p>
-      <h2>Chase</h2>
+      <h2 className="kilahname">Chase</h2>
       <h3>Stateful Statesmen</h3>
       <img className="chase" src=""></img>
       <p>words words more words, food puns</p>
-      <h2>Sara</h2>
+      <h2 className="kilahname">Sara</h2>
       <h3>Sassmaster</h3>
       <img className="sara" src=""></img>
       <p>
