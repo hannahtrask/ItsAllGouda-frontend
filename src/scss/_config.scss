@@ -1,18 +1,13 @@
 //color imports
-$coolGrey: #264653;
-$abyssGreen: #2A9D8F;
-$yellowOchre: #E9C46A;
-$deepOrange: #F4A261;
-$burntSienna: #E76F51;
+$gunmetal: #292f36;
+$mediumTurquoise: #4ecdc4;
+$mintCream: #f7fff7;
+$bittersweet: #ff6b6b;
+$naplesYellow: #ffe66d;
 
 //font imports
-@import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Roboto:wght@300;400;500&display=swap');
-////////FONTS!!///////////
-////WEIGHTS: Roboto- 300(light), 400(regular), 500(medium)
-////Carter is always the same weight
-// font-family: 'Carter One', cursive;
-// font-family: 'Roboto', sans-serif;
-
+// @import url("https://fonts.googleapis.com/css2?family=Carter+One&family=Roboto:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sigmar+One&family=Unica+One&display=swap");
 * {
-    font-family: 'Carter One', cursive;
+  font-family: "Sigmar One", cursive;
 }

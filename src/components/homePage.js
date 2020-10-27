@@ -9,14 +9,20 @@ function Home() {
 
   return (
     <div className="homepage">
-      <h1>It's all Gouda</h1>
+      <p className="title">It's all Gouda</p>
       <h2>Quarantine Food Picker</h2>
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQwPonxJBPD62Mz4zFtjrxrEBTsrM2DaVbLdA&usqp=CAU"></img>
+      <img
+        src="https://i.ibb.co/D5ZkY8D/luke-southern-4-GShi-SQpcg-unsplash.jpg"
+        alt="luke-southern-4-GShi-SQpcg-unsplash"
+        border="0"
+      />
       <Form>
         <Form.Group controlId="exampleForm.ControlSelect1">
-          <Form.Label>How you Feelin'?</Form.Label>
+          <Form.Label>
+            <h1>How you Feelin'?</h1>
+          </Form.Label>
           <br />
-          <Form.Control as="select">
+          <Form.Control className="emotions" as="select">
             <option>Happy</option>
             <option>Sad</option>
             <option>Moody</option>
@@ -25,6 +31,8 @@ function Home() {
       </Form>
       <br />
     </div>
+
+    // https://previews.123rf.com/images/romastudio/romastudio1603/romastudio160300223/54088692-organic-food-background-studio-photo-of-different-fruits-and-vegetables-on-old-wooden-table-high-res.jpg
   );
 }
 
