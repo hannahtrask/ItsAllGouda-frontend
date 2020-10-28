@@ -5,15 +5,15 @@ import "../scss/nav.scss";
 const Nav = (props) => {
   return (
     <nav>
-      <Link to="/" className="link">
-        <img
-          className="adorable"
-          src="https://i.ibb.co/HPDXXRJ/GOUDAA.png"
-          alt="GOUDAA"
-          border="0"
-        />
-      </Link>
       <ul>
+        <Link to="/" className="link">
+          <img
+            className="adorable"
+            src="https://i.ibb.co/5KcCGZV/GOUDAA.gif"
+            alt="GOUDAA"
+            border="0"
+          />
+        </Link>
         <Link to="/theteam" className="link">
           <li>meet the team</li>
         </Link>
