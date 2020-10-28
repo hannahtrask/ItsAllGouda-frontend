@@ -38,7 +38,7 @@ function Display(props) {
                   <Card.Subtitle>Author: {food.author}</Card.Subtitle>
                   <Card.Text>{food.description}</Card.Text>
                   <Card.Img src={food.img} alt="foods displayed on page"></Card.Img>
-                  <button className="EditDelete"><Link to='/create'>Edit</Link></button>
+                  <button className="EditDelete">Edit</button>
                   <button className="EditDelete" onClick={() => {
 								deleteFood(food);
 							}}>Delete</button>
