@@ -5,6 +5,7 @@ import Card from 'react-bootstrap/Card';
 import CardDeck from 'react-bootstrap/CardDeck';
 import "../scss/displayFoods.scss";
 import '../scss/homepage.scss';
+import { Link } from 'react-router-dom'
 
 function Display(props) {
   const [redirect, setRedirect] = useState(false);
@@ -37,7 +38,7 @@ function Display(props) {
                   <Card.Subtitle>Author: {food.author}</Card.Subtitle>
                   <Card.Text>{food.description}</Card.Text>
                   <Card.Img src={food.img} alt="foods displayed on page"></Card.Img>
-                  <button className="EditDelete">Edit</button>
+                  <button className="EditDelete"><Link to='/create'>Edit</Link></button>
                   <button className="EditDelete" onClick={() => {
 								deleteFood(food);
 							}}>Delete</button>
