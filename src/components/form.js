@@ -7,7 +7,7 @@ import { Redirect } from 'react-router';
 function CreateForm(props) {
 	const url = 'http://localhost:4000/gouda';
 	// const url = 'https://its-all-gouda-backend.herokuapp.com/gouda';
-
+	console.log(props)
 	const [redirect, setRedirect] = useState(false);
 
 	const [state, setState] = useState({
