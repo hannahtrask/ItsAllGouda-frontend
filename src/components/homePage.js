@@ -6,8 +6,9 @@ import Display from './displayFoods';
 import MoodForm from './form';
 
 function Home(props) {
-	// const url = 'http://localhost:4000/gouda';
-	const url = 'https://its-all-gouda-backend.herokuapp.com/gouda';
+	const url = 'http://localhost:4000/gouda';
+	// const url = 'https://its-all-gouda-backend.herokuapp.com/gouda';
+
 
 	const [initialMood, setInitialMood] = useState('happy');
 	const [mood, setMood] = useState([]);
@@ -30,16 +31,6 @@ function Home(props) {
 	// This use Effect works on page load and whenever the initialMood is changed by the dropdown.
 	React.useEffect(() => getMoods(), [initialMood]);
 
-	// this is for the form to make the API call and to reload the content that is in the homepage
-	// const handleCreate = (newState) => {
-	// 	fetch(url + '/moods/' + newState.mood, {
-	// 		method: 'put',
-	// 		headers: {
-	// 			'Content-Type': 'application/json',
-	// 		},
-	// 		body: JSON.stringify(newState),
-	// 	}).then((response) => getMoods());
-	// };
 
 	return (
 		<div className='homepage'>
