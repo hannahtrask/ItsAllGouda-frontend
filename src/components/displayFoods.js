@@ -1,20 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Redirect } from 'react-router';
 import '../scss/homepage.scss';
 
 function Display(props) {
-	// const url = 'http://localhost:4000/gouda';
-	const url = 'https://its-all-gouda-backend.herokuapp.com/gouda';
+	const [redirect, setRedirect] = useState(false);
+
+	const url = 'http://localhost:4000/gouda';
+	// const url = 'https://its-all-gouda-backend.herokuapp.com/gouda';
 	const { mood } = props;
 
-	//FUNCTION TO DELETE A Food Works but does not reload the page
-	// Maybe refactor and set mood.foods to state so that when something
-	// is deleted it will refresh
 	const deleteFood = (food) => {
 		fetch(url + '/foods/' + food._id, {
 			method: 'delete',
-		}).then((response) => {
-			loaded();
-		});
+		})
+			.then(() => setRedirect(true))
+			.then(() => loaded());
 	};
 
 	const loaded = () => (
@@ -40,7 +40,11 @@ function Display(props) {
 		</div>
 	);
 	const loading = <h1>Loading...</h1>;
-	return mood.length > 0 ? loaded() : loading;
+	if (!redirect) {
+		return mood.length > 0 ? loaded() : loading;
+	} else {
+		<Redirect to='/' />;
+	}
 }
 
 export default Display;
