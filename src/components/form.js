@@ -3,6 +3,7 @@ import '../scss/form.scss';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { Redirect } from 'react-router';
+import { Link } from 'react-router-dom';
 
 function CreateForm(props) {
 	const url = 'http://localhost:4000/gouda';
@@ -96,8 +97,7 @@ function CreateForm(props) {
 						type='submit'
 						variant='primary'
 						size='sm'
-						block>
-						Back to Mood
+						block><Link to='/'>Back to Mood</Link>
 					</Button>
 				</Form>
 			</div>
