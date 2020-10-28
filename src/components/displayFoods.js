@@ -40,6 +40,7 @@ function Display(props) {
 		</div>
 	);
 	const loading = <h1>Loading...</h1>;
+
 	if (!redirect) {
 		return mood.length > 0 ? loaded() : loading;
 	} else {
