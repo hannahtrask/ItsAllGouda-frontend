@@ -9,7 +9,7 @@ const Nav = (props) => {
         <Link to="/" className="link">
           <img
             className="adorable"
-            src="https://i.ibb.co/HPDXXRJ/GOUDAA.png"
+            src="https://i.ibb.co/5KcCGZV/GOUDAA.gif"
             alt="GOUDAA"
             border="0"
           />
