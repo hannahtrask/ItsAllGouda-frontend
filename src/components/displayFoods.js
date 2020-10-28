@@ -1,15 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
+import { Redirect } from 'react-router';
 import Form from "react-bootstrap/Form";
 import Card from 'react-bootstrap/Card';
 import CardDeck from 'react-bootstrap/CardDeck';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col'
 import "../scss/displayFoods.scss";
+import '../scss/homepage.scss';
 
 function Display(props) {
+  const [redirect, setRedirect] = useState(false);
+  
+  const url = 'http://localhost:4000/gouda';
+	// const url = 'https://its-all-gouda-backend.herokuapp.com/gouda';
+  
   const { mood } = props;
-  console.log(mood[0]);
+  
+	const deleteFood = (food) => {
+		fetch(url + '/foods/' + food._id, {
+			method: 'delete',
+		})
+			.then(() => setRedirect(true))
+			.then(() => loaded())
+			.then(()=>window.location.reload())
+	};
+  
   const loaded = () => (
     <div className="Display">
       <h1 className="moodName">{mood[0].name}</h1>
@@ -25,7 +38,9 @@ function Display(props) {
                   <Card.Text>{food.description}</Card.Text>
                   <Card.Img src={food.img} alt="foods displayed on page"></Card.Img>
                   <button className="EditDelete">Edit</button>
-                  <button className="EditDelete">Delete</button>
+                  <button className="EditDelete" onClick={() => {
+								deleteFood(food);
+							}}>Delete</button>
                 </Card.Body>
               </Card>
             </div>
