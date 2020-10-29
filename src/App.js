@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Route, Link, Switch } from 'react-router';
-
+import { Route, Switch } from 'react-router';
 import Home from '../src/components/homePage';
 import Nav from '../src/components/navbar';
 import Footer from '../src/components/footer';
@@ -9,12 +8,10 @@ import Team from '../src/components/team';
 import Form from '../src/components/form';
 
 function App() {
-	const url = 'http://localhost:4000/gouda';
-	// const url = 'https://its-all-gouda-backend.herokuapp.com/gouda';
+	const url = 'https://its-all-gouda-backend.herokuapp.com/gouda';
 	const [initialMood, setInitialMood] = useState('happy');
 	const [mood, setMood] = useState([]);
 
-	//This was moved from Home to here so that it could be passed as props easier
 	const getMoods = () => {
 		fetch(url + '/moods/' + initialMood)
 			.then((response) => response.json())
@@ -23,7 +20,6 @@ function App() {
 			});
 	};
 
-	//handleChange and handleCreate were moved so that we can re use the form for create and update like in the mern lab
 	const handleChange = (state) => {
 		setInitialMood(state);
 	};
@@ -45,10 +41,8 @@ function App() {
 	const handleSetFoodId = (state) => {
 		setNewFoodId(state);
 	};
-	console.log('this is newfood', newFoodId);
 
 	const handleUpdate = (food) => {
-		console.log('this is running', food);
 		fetch(url + '/foods/' + food.foodId, {
 			method: 'put',
 			headers: {
