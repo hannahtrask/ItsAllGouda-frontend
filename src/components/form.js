@@ -6,7 +6,7 @@ import { Redirect } from 'react-router';
 import { Link } from 'react-router-dom';
 
 function CreateForm(props) {
-	const url = 'https://its-all-gouda-backend.herokuapp.com/gouda';
+	const url = 'https://its-all-gouda-backend.herokuapp.com/';
 	const [redirect, setRedirect] = useState(false);
 
 	const [state, setState] = useState({
