@@ -8,7 +8,7 @@ import Team from '../src/components/team';
 import Form from '../src/components/form';
 
 function App() {
-	const url = 'https://its-all-gouda-backend.herokuapp.com/';
+	const url = 'https://its-all-gouda-backend.herokuapp.com/gouda';
 	const [initialMood, setInitialMood] = useState('happy');
 	const [mood, setMood] = useState([]);
 
