@@ -2,15 +2,12 @@ import React, { useState } from 'react';
 import '../scss/form.scss';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import { Redirect } from 'react-router';
 import { Link } from 'react-router-dom';
 
 function CreateForm(props) {
-	const url = 'https://its-all-gouda-backend.herokuapp.com/gouda';
-	const [redirect, setRedirect] = useState(false);
 
 	const [state, setState] = useState({
-		mood: '',
+		mood: 'Happy',
 		author: '',
 		name: '',
 		course: '',
@@ -39,7 +36,6 @@ function CreateForm(props) {
 					<Form.Control name='mood' as='select' onChange={handleChange}>
 						<option>Happy</option>
 						<option>Blue</option>
-						<option>Moody</option>
 						<option>Sassy</option>
 						<option>Mad</option>
 						<option>Punchy</option>
@@ -50,7 +46,7 @@ function CreateForm(props) {
 				<Form.Group controlId='exampleForm.ControlInput1'>
 					<Form.Control className="foodname"
 						type='text'
-						name='author'
+						name='name'
 						placeholder='Food Name'
 						onChange={handleChange}
 					/>
@@ -58,7 +54,7 @@ function CreateForm(props) {
 				<Form.Group controlId='exampleForm.ControlInput1'>
 					<Form.Control className="author"
 						type='text'
-						name='name'
+						name='author'
 						placeholder='Author'
 						onChange={handleChange}
 					/>
@@ -74,7 +70,7 @@ function CreateForm(props) {
 				<Form.Group controlId='exampleForm.ControlInput1'>
 					<Form.Control className="description"
 						type='text'
-						name='img'
+						name='description'
 						placeholder='Description'
 						onChange={handleChange}
 					/>
@@ -82,7 +78,7 @@ function CreateForm(props) {
 				<Form.Group controlId='exampleForm.ControlInput1'>
 					<Form.Control className="imagelink"
 						type='text'
-						name='description'
+						name='img'
 						placeholder='Image Link'
 						onChange={handleChange}
 					/>
