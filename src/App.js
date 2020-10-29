@@ -40,20 +40,21 @@ function App() {
 		}).then(() => getMoods());
 	};
 
-	const [newFoodId, setNewFoodId] = useState('');
+	const [newFoodId, setNewFoodId] = useState('here it is');
 
 	const handleSetFoodId = (state) => {
 		setNewFoodId(state);
 	};
-	console.log(newFoodId);
+	console.log('this is newfood', newFoodId);
 
-	const handleUpdate = (updateState) => {
-		fetch(url + '/foods/' + newFoodId, {
+	const handleUpdate = (food) => {
+		console.log('this is running', food);
+		fetch(url + '/foods/' + food.foodId, {
 			method: 'put',
 			headers: {
 				'Content-Type': 'application/json',
 			},
-			body: JSON.stringify(updateState),
+			body: JSON.stringify(food),
 		}).then(() => {
 			getMoods();
 		});
@@ -79,7 +80,7 @@ function App() {
 					)}
 				/>
 				<Route
-					path='/edit'
+					path='/edit/:id'
 					render={(rp) => (
 						<Form
 							{...rp}
