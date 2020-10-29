@@ -1,14 +1,11 @@
 import React, { useState } from 'react';
-import { Route } from 'react-router';
 import Form from 'react-bootstrap/Form';
 import '../scss/homepage.scss';
 import Display from './displayFoods';
-import MoodForm from './form';
 
 function Home(props) {
 	const url = 'http://localhost:4000/gouda';
 	// const url = 'https://its-all-gouda-backend.herokuapp.com/gouda';
-
 
 	const [initialMood, setInitialMood] = useState('happy');
 	const [mood, setMood] = useState([]);
@@ -30,7 +27,6 @@ function Home(props) {
 
 	// This use Effect works on page load and whenever the initialMood is changed by the dropdown.
 	React.useEffect(() => getMoods(), [initialMood]);
-
 
 	return (
 		<div className='homepage'>
