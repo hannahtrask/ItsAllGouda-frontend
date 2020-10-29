@@ -13,7 +13,7 @@ const Team = () => {
           alt="Kilah-mask"
           border="0"
         />
-        <p className="kp">words words more words, food puns</p>
+        <p className="kp"></p>
       </div>
 
       <div className="hannahbox">
@@ -48,8 +48,15 @@ const Team = () => {
       <div id="chasebox">
         <h2 className="kilahname">Chase</h2>
         <h3>Stateful Statesman</h3>
-        <img className="chase" src=""></img>
-        <p className="cp">words words more words, food puns</p>
+        <img className="chase" src="https://i.ibb.co/tzYgXtk/Chase-mask.png" alt="Chase-mask" border="0">"></https:>
+        <p className="cp">Chase is your average rock climbing enthusiast and wanna be software<br />
+         engineer. When he's not scaling tall cliffs, drinking another random beer with a <br/>
+         cool looking label (because everyone knows thats the most important part). <br />
+         You can find him hunched over his keyboard coding away into the wee hours of the night to <br />
+         finish his homework at General Assembly. Chase spent most of him time fighting with the forms, <br />
+         api and general functionality all the while hoping his code stays together long enough to show the project <br/>
+         at presentation time. Finally getting to see individual foods being updated with <br/>
+         the form he created was a huge relief and moment of joy for Chase!</p>
       </div>
 
       <div className="sarabox">
