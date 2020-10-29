@@ -12,7 +12,6 @@ function CreateForm(props) {
 	const [redirect, setRedirect] = useState(false);
 
 	const [state, setState] = useState({
-		mood: 'Happy',
 		name: '',
 		course: '',
 		img: '',
@@ -25,11 +24,13 @@ function CreateForm(props) {
 
 	const handleSubmit = (event) => {
 		event.preventDefault();
-		handleCreate();
+		handleEdit();
 	};
 
-	const handleCreate = () => {
-		fetch(url + '/moods/' + state.mood, {
+	//.put('/foods/:id',
+
+	const handleEdit = () => {
+		fetch(url + '/foods/' + state.mood, {
 			method: 'put',
 			headers: {
 				'Content-Type': 'application/json',
@@ -41,16 +42,9 @@ function CreateForm(props) {
 	if (!redirect) {
 		return (
 			<div className='form'>
-				<h1 className='addmood'>Add Mood Food</h1>
 				<Form onSubmit={handleSubmit} className='form'>
 					<Form.Group controlId='exampleForm.ControlSelect1'>
-						<Form.Label>How you Feelin'?</Form.Label>
-						<br />
-						<Form.Control name='mood' as='select' onChange={handleChange}>
-							<option>Happy</option>
-							<option>Blue</option>
-							<option>Moody</option>
-						</Form.Control>
+						<Form.Label>Edit Your food!</Form.Label>
 					</Form.Group>
 					<Form.Group controlId='exampleForm.ControlInput1'>
 						<Form.Control
@@ -104,7 +98,7 @@ function CreateForm(props) {
 			</div>
 		);
 	} else {
-		return <Redirect to='/' />;
+		return <Redirect to='/edit' />;
 	}
 }
 

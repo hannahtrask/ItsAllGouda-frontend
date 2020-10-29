@@ -4,29 +4,13 @@ import '../scss/homepage.scss';
 import Display from './displayFoods';
 
 function Home(props) {
+	const { mood } = props;
 	const url = 'http://localhost:4000/gouda';
 	// const url = 'https://its-all-gouda-backend.herokuapp.com/gouda';
 
-	const [initialMood, setInitialMood] = useState('happy');
-	const [mood, setMood] = useState([]);
-
-	// HANDLE CHANGE SETS THE INITIAL MOOD STATE AND WHAT IS SHOWN ON PAGE LOAD IN THIS CASE WE SHOW 'HAPPY' FOODS ON PAGE LOAD
 	const handleChange = (event) => {
-		setInitialMood(event.target.value);
+		props.handleChange(event.target.value);
 	};
-
-	// Get moods function fetches the url based on which mood state is picked...if it is happy it gets all of the moods with the name:Happy... if its sad it gets all of the moods with the name: Sad... this only works if its capitalized right now so we will have to write some code taht fixes that
-	const getMoods = () => {
-		fetch(url + '/moods/' + initialMood)
-			.then((response) => response.json())
-			.then((data) => {
-				console.log(data);
-				setMood(data);
-			});
-	};
-
-	// This use Effect works on page load and whenever the initialMood is changed by the dropdown.
-	React.useEffect(() => getMoods(), [initialMood]);
 
 	return (
 		<div className='homepage'>
@@ -43,8 +27,10 @@ function Home(props) {
 					<br />
 					<Form.Control as='select' onChange={handleChange}>
 						<option>Happy</option>
-						<option>Sad</option>
-						<option>Moody</option>
+						<option>Blue</option>
+						<option>Sassy</option>
+						<option>Mad</option>
+						<option>Punchy</option>
 					</Form.Control>
 				</Form.Group>
 			</Form>
