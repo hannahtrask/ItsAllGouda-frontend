@@ -19,9 +19,31 @@ const Team = () => {
       <div className="hannahbox">
         <h2 className="kilahname">Hannah</h2>
         <h3>Frontend Phenom</h3>
-        <img className="hannah" src=""></img>
-        <p className="hp">words words more words, food puns, <br /> lots of words words words brwordsdalk <br /> jfoldogdsoj;klsdjokdokldjjwgldkasjgikgnow </p>
-      </div >
+        <img
+          className="hannah"
+          src="https://i.ibb.co/pK6J7x3/Hannah-mask.png"
+          alt="Hannah-mask"
+          border="0"
+        />
+        <p className="hp">
+          Hannah is a whitewater raft guide turned software engineer. When she's
+          not <br />
+          studying with General Assembly, she's spending time outside, pursuing{" "}
+          <br />
+          another new hobby or chatting with friends over a large glass of wine.{" "}
+          <br />
+          For this full stack project, Hannah managed the team GitHub and tried
+          her <br />
+          best to embody a true renaissance woman, dabbling a little in all
+          aspects of <br />
+          the project.
+          <br />
+          <br />
+          Her pride and joy is the random pun generator— refresh the page and{" "}
+          <br />
+          see her handiwork in action.
+        </p>
+      </div>
 
       <div id="chasebox">
         <h2 className="kilahname">Chase</h2>
@@ -39,18 +61,27 @@ const Team = () => {
           alt="Sara-mask"
           border="0"
         />
-        <p className="sp"> test words
-        {/* Sara's passion has revolved around the music industry, graphic design
-        and festivals in the Atlanta area. She has always had a curiosity for
-        how computers and how machines work, with a borderline compulsive urge
-        to take video gear apart. Her time spent in the immersive program at
-        General Assembly was one of the best challenges of 2020. Learning a new
-        skill that will allow her to grow more within the entertainment industry
-        as well as being able to enter a new "world" is exactly the optimism and
-        bright future the dull year needed. */}
+        <p className="sp">
+          {" "}
+          Sara's passion has revolved around the music industry, graphic design
+          <br />
+          and festivals in the Atlanta area. She has always had a curiosity for
+          <br />
+          how computers and how machines work, with a borderline compulsive urge
+          <br />
+          to take video gear apart. During this General Assembly project, she
+          has
+          <br />
+          enjoyed designing and styling the App with her amazing team and
+          helping
+          <br />
+          think out logic behind functionality.
+          <br />
+          <br />
+          Long live little Cheeseman!
         </p>
       </div>
-    </div >
+    </div>
   );
 };
 
