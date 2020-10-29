@@ -4,7 +4,7 @@ import '../scss/homepage.scss';
 import Display from './displayFoods';
 
 function Home(props) {
-	const { mood } = props;
+	const { mood, handleSetFoodId } = props;
 	const url = 'http://localhost:4000/gouda';
 	// const url = 'https://its-all-gouda-backend.herokuapp.com/gouda';
 
@@ -35,7 +35,7 @@ function Home(props) {
 				</Form.Group>
 			</Form>
 			<br />
-			<Display mood={mood} />
+			<Display mood={mood} handleSetFoodId={handleSetFoodId} />
 		</div>
 	);
 }

@@ -7,7 +7,6 @@ import Footer from '../src/components/footer';
 import About from '../src/components/about';
 import Team from '../src/components/team';
 import Form from '../src/components/form';
-import EditForm from '../src/components/editForm';
 
 function App() {
 	const url = 'http://localhost:4000/gouda';
@@ -15,25 +14,23 @@ function App() {
 	const [initialMood, setInitialMood] = useState('happy');
 	const [mood, setMood] = useState([]);
 
+	//This was moved from Home to here so that it could be passed as props easier
 	const getMoods = () => {
 		fetch(url + '/moods/' + initialMood)
 			.then((response) => response.json())
 			.then((data) => {
-				console.log(data);
 				setMood(data);
 			});
 	};
 
+	//handleChange and handleCreate were moved so that we can re use the form for create and update like in the mern lab
 	const handleChange = (state) => {
 		setInitialMood(state);
 	};
 
 	React.useEffect(() => getMoods(), [initialMood]);
 
-	const [newFood, setNewFood] = useState({});
-
 	const handleCreate = (newState) => {
-		console.log('handlecreate is working', newState);
 		fetch(url + '/moods/' + newState.mood, {
 			method: 'put',
 			headers: {
@@ -43,12 +40,35 @@ function App() {
 		}).then(() => getMoods());
 	};
 
+	const [newFoodId, setNewFoodId] = useState('');
+
+	const handleSetFoodId = (state) => {
+		setNewFoodId(state);
+	};
+	console.log(newFoodId);
+
+	const handleUpdate = (updateState) => {
+		fetch(url + '/foods/' + newFoodId, {
+			method: 'put',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify(updateState),
+		}).then(() => {
+			getMoods();
+		});
+	};
+
 	return (
 		<>
 			<Nav />
 			<Switch>
 				<Route exact path='/'>
-					<Home handleChange={handleChange} mood={mood} />
+					<Home
+						handleChange={handleChange}
+						mood={mood}
+						handleSetFoodId={handleSetFoodId}
+					/>
 				</Route>
 				<Route path='/theteam' component={Team} />
 				<Route path='/about' component={About} />
@@ -65,7 +85,7 @@ function App() {
 							{...rp}
 							label='update'
 							mood={mood}
-							handleSubmit={handleCreate}
+							handleSubmit={handleUpdate}
 						/>
 					)}
 				/>

@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 
 function Display(props) {
 	const [redirect, setRedirect] = useState(false);
+	const [foodId, setFoodId] = useState('');
 
 	const url = 'http://localhost:4000/gouda';
 	// const url = 'https://its-all-gouda-backend.herokuapp.com/gouda';
@@ -19,6 +20,11 @@ function Display(props) {
 			.then(() => setRedirect(true))
 			.then(() => loaded())
 			.then(() => window.location.reload());
+	};
+
+	const handleEditFood = (food) => {
+		setFoodId(food);
+		props.handleSetFoodId(foodId);
 	};
 
 	const loaded = () => (
@@ -46,8 +52,18 @@ function Display(props) {
 									<Card.Img
 										src={food.img}
 										alt='foods displayed on page'></Card.Img>
-									<button className='EditDelete'>Edit</button>
+									<Link to='/edit'>
+										<button
+											type='button'
+											onClick={() => {
+												handleEditFood(food._id);
+											}}
+											className='EditDelete'>
+											Edit
+										</button>
+									</Link>
 									<button
+										type='button'
 										className='EditDelete'
 										onClick={() => {
 											deleteFood(food);
