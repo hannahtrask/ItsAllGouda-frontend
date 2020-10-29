@@ -35,7 +35,7 @@ function Home(props) {
   return (
     <div className='homepage'>
       <h1 className='goudatitle'>It's all Gouda</h1>
-      <h2>Quarantine Food Picker</h2>
+      <h2 className='goudasub'>Quarantine Food Picker</h2>
       <img
         src='https://i.ibb.co/D5ZkY8D/luke-southern-4-GShi-SQpcg-unsplash.jpg'
         alt='luke-southern-4-GShi-SQpcg-unsplash'
@@ -43,7 +43,7 @@ function Home(props) {
       />
       <Form>
         <Form.Group controlId='exampleForm.ControlSelect1'>
-          <Form.Label>How you Feelin'?</Form.Label>
+          <Form.Label className='formlabel'>How you Feelin'?</Form.Label>
           <br />
           <Form.Control as='select' onChange={handleChange}>
             <option>Happy</option>
