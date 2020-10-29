@@ -7,9 +7,7 @@ import { Link } from 'react-router-dom';
 function Display(props) {
 	const [redirect, setRedirect] = useState(false);
 	const [foodId, setFoodId] = useState('');
-
-	const url = 'http://localhost:4000/gouda';
-	// const url = 'https://its-all-gouda-backend.herokuapp.com/gouda';
+	const url = 'https://its-all-gouda-backend.herokuapp.com/gouda';
 
 	const { mood } = props;
 
