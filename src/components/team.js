@@ -5,7 +5,7 @@ const Team = () => {
   return (
     <div className="chaseandgals">
       <h2 className="kilahname">Kilah</h2>
-      <h3 className="kandc">Backend Baller</h3>
+      <h3>Backend Baller</h3>
       <img
         className="kilah"
         src="https://i.ibb.co/9rDfC0m/Kilah-mask.png"
@@ -13,12 +13,12 @@ const Team = () => {
         border="0"
       />
       <p>words words more words, food puns</p>
-      <h2 className="Hannah">Hannah</h2>
+      <h2 className="kilahname">Hannah</h2>
       <h3>Frontend Phenom</h3>
       <img className="hannah" src=""></img>
       <p>words words more words, food puns</p>
       <h2 className="kilahname">Chase</h2>
-      <h3 className="kandc">Stateful Statesmen</h3>
+      <h3>Stateful Statesmen</h3>
       <img className="chase" src=""></img>
       <p>words words more words, food puns</p>
       <h2 className="kilahname">Sara</h2>
