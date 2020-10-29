@@ -33,7 +33,8 @@ function CreateForm(props) {
 			<h1 className='addmood'>Add Mood Food</h1>
 			<Form onSubmit={handleSubmit} className='form'>
 				<Form.Group controlId='exampleForm.ControlSelect1'>
-					<Form.Label>How you Feelin'?</Form.Label>
+					<Form.Label className="formsub">How you Feelin'?</Form.Label>
+					<br />
 					<br />
 					<Form.Control name='mood' as='select' onChange={handleChange}>
 						<option>Happy</option>
@@ -43,47 +44,51 @@ function CreateForm(props) {
 						<option>Mad</option>
 						<option>Punchy</option>
 					</Form.Control>
+					<br />
+					<br />
 				</Form.Group>
 				<Form.Group controlId='exampleForm.ControlInput1'>
-					<Form.Control
+					<Form.Control className="foodname"
 						type='text'
 						name='author'
-						placeholder='Your name Here'
+						placeholder='Food Name'
 						onChange={handleChange}
 					/>
 				</Form.Group>
 				<Form.Group controlId='exampleForm.ControlInput1'>
-					<Form.Control
+					<Form.Control className="author"
 						type='text'
 						name='name'
-						placeholder='Name your Food'
+						placeholder='Author'
 						onChange={handleChange}
 					/>
 				</Form.Group>
 				<Form.Group controlId='exampleForm.ControlInput1'>
-					<Form.Control
+					<Form.Control className="course"
 						type='text'
 						name='course'
-						placeholder='Course?'
+						placeholder='Course'
 						onChange={handleChange}
 					/>
 				</Form.Group>
 				<Form.Group controlId='exampleForm.ControlInput1'>
-					<Form.Control
+					<Form.Control className="description"
 						type='text'
 						name='img'
-						placeholder='image link'
+						placeholder='Description'
 						onChange={handleChange}
 					/>
 				</Form.Group>
 				<Form.Group controlId='exampleForm.ControlInput1'>
-					<Form.Control
+					<Form.Control className="imagelink"
 						type='text'
 						name='description'
-						placeholder='description'
+						placeholder='Image Link'
 						onChange={handleChange}
 					/>
 				</Form.Group>
+				<br />
+				<br />
 				<Button
 					className='mt-2'
 					type='submit'
@@ -92,6 +97,8 @@ function CreateForm(props) {
 					block>
 					{props.label}
 				</Button>
+				<br />
+				<br />
 				<Button
 					className='mt-2'
 					type='submit'

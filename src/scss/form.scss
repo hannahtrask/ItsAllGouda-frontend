@@ -3,13 +3,88 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  box-sizing: border-box;
+  padding: 20px;
 }
-
-.addmood {
-  color: white;
-  font-family: "Sigmar One", cursive;
-}
-
 .mt-2 {
   font-family: "Open Sans", sans-serif;
+}
+.addmood {
+  color: #ffe66d;
+  font-family: "Sigmar One", cursive;
+  font-size: 25px;
+}
+.formsub {
+  color: #f7fff7;
+  font-size: 20px;
+  font-weight: bold;
+}
+.foodname {
+  margin-bottom: 5px; 
+}
+.author {
+  margin-bottom: 5px;
+}
+.course {
+  margin-bottom: 5px;
+}
+.imagelink {
+  margin-bottom: 5px;
+}
+.description {
+  margin-bottom: 5px;
+}
+@media screen and (min-width: 768px) {
+  .form {
+   min-height: 400px;
+  }
+  .foodname {
+    width: 300px;
+  }
+  .author {
+    width: 300px;
+}
+  .course {
+    width: 300px;
+  }
+  .imagelink {
+    width: 300px;
+}
+  .description {
+    width: 300px;
+}
+}
+@media screen and (min-width: 1440px) {
+  .addmood{
+    font-size: 50px;
+  }
+  .formsub {
+    font-size: 40px;
+  }
+   .form {
+   margin-top: 50px;
+   min-height: 600px;
+  }
+  .foodname {
+    width: 400px;
+  }
+  .author {
+    width: 400px;
+}
+  .course{
+    width: 400px
+  }
+  .imagelink {
+    width: 400px;
+}
+  .description {
+    width: 400px;
+}
+
+@media screen and (min-width: 2560px) {
+  .form {
+    min-height: 2000px;
+    // margin-bottom: 600px;
+  }
+}
 }
