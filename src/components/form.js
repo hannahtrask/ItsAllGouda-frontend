@@ -48,15 +48,17 @@ function CreateForm(props) {
 						<br />
 						<Form.Control name='mood' as='select' onChange={handleChange}>
 							<option>Happy</option>
+							<option>Sassy</option>
+							<option>Punchy</option>
 							<option>Blue</option>
-							<option>Moody</option>
+							<option>Mad</option>
 						</Form.Control>
 					</Form.Group>
 					<Form.Group controlId='exampleForm.ControlInput1'>
 						<Form.Control
 							type='text'
 							name='name'
-							placeholder='Type of Food'
+							placeholder='Food Name'
 							onChange={handleChange}
 						/>
 					</Form.Group>
@@ -64,7 +66,7 @@ function CreateForm(props) {
 						<Form.Control
 							type='text'
 							name='course'
-							placeholder='Type of Food'
+							placeholder='Author'
 							onChange={handleChange}
 						/>
 					</Form.Group>
