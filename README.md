@@ -120,7 +120,8 @@ Below is a link to our wireframe, we'll adjust this to be responsive as we devel
 ## Additional Libraries
 
   - [Contentful](https://www.contentful.com/get-started/)
-  - [additional library](additional library link)
+  - [React Bootstrap](https://react-bootstrap.github.io/)
+  - [Sass](https://sass-lang.com/)
 
 ## Code Snippet
 
