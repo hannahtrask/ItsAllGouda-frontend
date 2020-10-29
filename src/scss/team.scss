@@ -1,3 +1,14 @@
+div.chaseandgals {
+  // margin: 10px;
+  padding: 20px;
+  display: grid;
+  grid-template-areas: left right;
+  grid-template-columns: repeat (2, 2fr);
+  grid-template-rows: 80px;
+  grid-gap: 10px;
+  width: 100%;
+}
+
 .kilahname {
   color: #f7fff7;
   font-family: "Sigmar One", cursive;
@@ -31,12 +42,6 @@ p {
   width: 180px;
 }
 
-div.chaseandgals {
-  margin: 10px;
-  padding: 20px;
-  //   display: grid;
-  //   grid-template-columns: 2fr 1fr 1fr;
-  //   /* grid-template-rows: 1fr 1fr 1fr; */
-  //   grid-template-rows: repeat(3, 1fr);
-  //   grid-gap: 10px;
+.kandc {
+  grid-area: right;
 }
