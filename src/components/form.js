@@ -6,9 +6,7 @@ import { Redirect } from 'react-router';
 import { Link } from 'react-router-dom';
 
 function CreateForm(props) {
-	console.log(props);
-	const url = 'http://localhost:4000/gouda';
-	// const url = 'https://its-all-gouda-backend.herokuapp.com/gouda';
+	const url = 'https://its-all-gouda-backend.herokuapp.com/gouda';
 	const [redirect, setRedirect] = useState(false);
 
 	const [state, setState] = useState({
@@ -30,22 +28,6 @@ function CreateForm(props) {
 		props.history.push('/');
 	};
 
-	// const handleSubmit = (event) => {
-	// 	event.preventDefault();
-	// 	handleCreate();
-	// };
-
-	// const handleCreate = () => {
-	// 	fetch(url + '/moods/' + state.mood, {
-	// 		method: 'put',
-	// 		headers: {
-	// 			'Content-Type': 'application/json',
-	// 		},
-	// 		body: JSON.stringify(state),
-	// 	}).then(() => setRedirect(true));
-	// };
-
-	// if (!redirect) {
 	return (
 		<div className='form'>
 			<h1 className='addmood'>Add Mood Food</h1>
@@ -121,9 +103,6 @@ function CreateForm(props) {
 			</Form>
 		</div>
 	);
-	// } else {
-	// 	return <Redirect to='/' />;
-	// }
 }
 
 export default CreateForm;

@@ -5,8 +5,7 @@ import Display from './displayFoods';
 
 function Home(props) {
 	const { mood, handleSetFoodId } = props;
-	const url = 'http://localhost:4000/gouda';
-	// const url = 'https://its-all-gouda-backend.herokuapp.com/gouda';
+	const url = 'https://its-all-gouda-backend.herokuapp.com/gouda';
 
 	const handleChange = (event) => {
 		props.handleChange(event.target.value);
