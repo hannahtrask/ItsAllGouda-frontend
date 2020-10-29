@@ -125,7 +125,7 @@ Below is a link to our wireframe, we'll adjust this to be responsive as we devel
 
 ## Code Snippet
 
-here's a code snippet or two we're all really proud of
+This shows how we mapped over the mood to display all associated foods.
 
 ```javascript
 	const loaded = () => (
