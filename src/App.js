@@ -30,11 +30,18 @@ function App() {
 
 	React.useEffect(() => getMoods(), [initialMood]);
 
-	// const [editFood, setEditFood] = useState({});
+	const [newFood, setNewFood] = useState({});
 
-	// const handleEdit = (state) => {
-	// 	setEditFood(state);
-	// };
+	const handleCreate = (newState) => {
+		console.log('handlecreate is working', newState);
+		fetch(url + '/moods/' + newState.mood, {
+			method: 'put',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify(newState),
+		}).then(() => getMoods());
+	};
 
 	return (
 		<>
@@ -47,11 +54,20 @@ function App() {
 				<Route path='/about' component={About} />
 				<Route
 					path='/create'
-					render={(rp) => <Form {...rp} label='Submit' />}
+					render={(rp) => (
+						<Form {...rp} label='Submit' handleSubmit={handleCreate} />
+					)}
 				/>
 				<Route
 					path='/edit'
-					render={(rp) => <EditForm {...rp} label='update' />}
+					render={(rp) => (
+						<Form
+							{...rp}
+							label='update'
+							mood={mood}
+							handleSubmit={handleCreate}
+						/>
+					)}
 				/>
 			</Switch>
 			{/* <Footer /> */}
