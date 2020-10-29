@@ -52,7 +52,7 @@ function Display(props) {
 									<Card.Img
 										src={food.img}
 										alt='foods displayed on page'></Card.Img>
-									<Link to='/edit'>
+									<Link to={`/edit/${food._id}`}>
 										<button
 											type='button'
 											onClick={() => {
