@@ -6,16 +6,19 @@ import { Redirect } from 'react-router';
 import { Link } from 'react-router-dom';
 
 function CreateForm(props) {
+	console.log(props);
 	const url = 'http://localhost:4000/gouda';
 	// const url = 'https://its-all-gouda-backend.herokuapp.com/gouda';
 	const [redirect, setRedirect] = useState(false);
 
 	const [state, setState] = useState({
-		mood: 'Happy',
+		mood: '',
+		author: '',
 		name: '',
 		course: '',
 		img: '',
 		description: '',
+		foodId: props.match.params.id,
 	});
 
 	const handleChange = (event) => {
@@ -54,13 +57,24 @@ function CreateForm(props) {
 						<option>Happy</option>
 						<option>Blue</option>
 						<option>Moody</option>
+						<option>Sassy</option>
+						<option>Mad</option>
+						<option>Punchy</option>
 					</Form.Control>
 				</Form.Group>
 				<Form.Group controlId='exampleForm.ControlInput1'>
 					<Form.Control
 						type='text'
+						name='author'
+						placeholder='Your name Here'
+						onChange={handleChange}
+					/>
+				</Form.Group>
+				<Form.Group controlId='exampleForm.ControlInput1'>
+					<Form.Control
+						type='text'
 						name='name'
-						placeholder='Type of Food'
+						placeholder='Name your Food'
 						onChange={handleChange}
 					/>
 				</Form.Group>
@@ -68,7 +82,7 @@ function CreateForm(props) {
 					<Form.Control
 						type='text'
 						name='course'
-						placeholder='Type of Food'
+						placeholder='Course?'
 						onChange={handleChange}
 					/>
 				</Form.Group>
