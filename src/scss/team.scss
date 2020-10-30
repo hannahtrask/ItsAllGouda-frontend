@@ -1,14 +1,18 @@
 .kilahname {
   color: #ffe66d;
   font-family: "Sigmar One", cursive;
+  font-size: 40px;
 }
 
 h3 {
   color: #ff6b6b;
+  font-size: 28px;
 }
 
 p {
   color: #f7fff7;
+  font-size: 17px;
+  font-weight: bold;
 }
 
 .kilah {
@@ -49,7 +53,7 @@ div.chaseandgals {
 
 @media screen and (min-width: 768px) {
   #chaseandgals {
-    margin: 40px;
+    margin: 10px;
   }
   #kilahbox {
     text-align: right;
@@ -76,8 +80,17 @@ div.chaseandgals {
 
 @media screen and (min-width: 1024px) {
   #chaseandgals {
-    margin: 0 240px 50px 240px;
+    margin: 0 150px 50px 150px;
   }
+  .kilahname {
+  color: #ffe66d;
+  font-family: "Sigmar One", cursive;
+  font-size: 20px;
+}
+h3 {
+  font-size: 20px;
+}
+
 
   .sara {
     height: 280px;
@@ -98,4 +111,14 @@ div.chaseandgals {
     height: 280px;
     width: 280px;
   }
+}
+
+@media screen and (min-width: 1440px) {
+  .kilahname {
+  font-size: 40px;
+}
+  h3 {
+  
+  font-size: 28px;
+}
 }
