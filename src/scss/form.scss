@@ -5,6 +5,7 @@
   text-align: center;
   box-sizing: border-box;
   padding: 20px;
+  margin-bottom: 50px;
 }
 
 .addmood {
@@ -52,7 +53,8 @@
 
 @media screen and (min-width: 768px) {
   .form {
-   min-height: 400px;
+  margin-bottom: 200px;
+   
   }
   .foodname {
     width: 300px;
@@ -76,6 +78,7 @@
     font-size: 20px;
   }
 }
+
 @media screen and (min-width: 1440px) {
   .addmood{
     font-size: 50px;
@@ -89,18 +92,23 @@
   }
   .foodname {
     width: 400px;
+    font-size: 20px;
   }
   .author {
     width: 400px;
+    font-size: 20px;
 }
-  .course{
-    width: 400px
+  .course {
+    width: 400px;
+    font-size: 20px;
   }
   .imagelink {
     width: 400px;
+    font-size: 20px;
 }
   .description {
     width: 400px;
+    font-size: 20px;
 } 
    .mt-2 {
     font-size: 25px;
@@ -114,6 +122,6 @@
 @media screen and (min-width: 2560px) {
   .form {
     min-height: 2000px;
-    // margin-bottom: 600px;
+    
   }
 }

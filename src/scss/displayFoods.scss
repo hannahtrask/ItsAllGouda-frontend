@@ -1,5 +1,7 @@
 .moodName {
   font-family: "Open Sans", sans-serif;
+  color: #4ecdc4;
+  font-size: 30px;
 }
 .cards {
   font-size: 16px;
@@ -12,11 +14,32 @@
   background-color: #ff6b6b;
   border: 1px solid #ff6b6b;
   border-radius: 12px;
-  
 }
 .addfood {
   color:#f7fff7;
   text-decoration: none;
+}
+.cardtitle {
+  font-size: 25px;
+  font-weight: bold;
+  color: #ffe66d;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.cardauthor {
+  font-size: 20px;
+  font-weight: bold;
+}
+span {
+  color: #4ecdc4;
+  padding: 10px;
+}
+.carddesc {
+  font-size: 22px;
+  font-weight: bold;
+}
+.cardimg {
+  margin-bottom: 5px;
 }
 .EditDelete {
   padding: 10px;
@@ -24,19 +47,44 @@
   border-radius: 12px;
   background-color: #ffe66d;
   color: #292f36;
+  margin-bottom: 15px;
 }
-
 @media screen and (min-width: 768px) {
   .EditDelete {
     font-size: 15px;
   }
+  .cardtitle {
+    margin-top: 20px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .moodName {
+    font-size: 45px;
+  }
+   .cardtitle {
+    font-size: 30px;
+    padding-top: 20px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
+  .moodName {
+    font-size: 45px;
+  }
   .MoodFood {
     font-size: 18px;
     font-weight: bolder;
   }
+  .cardtitle {
+    font-size: 35px;
+    padding-top: 20px;
+  }
+  .cardauthor {
+  font-size: 25px;
+}
+  .carddesc {
+  font-size: 30px;
+}
   .EditDelete {
     font-size: 20px;
   }

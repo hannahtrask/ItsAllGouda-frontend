@@ -1,14 +1,18 @@
 .kilahname {
   color: #ffe66d;
   font-family: "Sigmar One", cursive;
+  font-size: 40px;
 }
 
 h3 {
   color: #ff6b6b;
+  font-size: 28px;
 }
 
 p {
   color: #f7fff7;
+  font-size: 17px;
+  font-weight: bold;
 }
 
 .kilah {
@@ -34,11 +38,6 @@ p {
 div.chaseandgals {
   margin: 10px;
   padding: 20px;
-  //   display: grid;
-  //   grid-template-columns: 2fr 1fr 1fr;
-  //   /* grid-template-rows: 1fr 1fr 1fr; */
-  //   grid-template-rows: repeat(3, 1fr);
-  //   grid-gap: 10px;
 }
 
 @media screen and (max-width: 767px) {
@@ -55,10 +54,10 @@ div.chaseandgals {
     text-align: right;
     padding: 0px;
   }
+
   .kp {
     float: left;
     text-align: justify;
-    display: inline-block;
   }
   .hp {
     float: right;
@@ -79,6 +78,15 @@ div.chaseandgals {
   #chaseandgals {
     margin: 0 150px 50px 150px;
   }
+  .kilahname {
+  color: #ffe66d;
+  font-family: "Sigmar One", cursive;
+  font-size: 20px;
+}
+h3 {
+  font-size: 20px;
+}
+
 
   .sara {
     height: 280px;
@@ -99,4 +107,14 @@ div.chaseandgals {
     height: 280px;
     width: 280px;
   }
+}
+
+@media screen and (min-width: 1440px) {
+  .kilahname {
+  font-size: 40px;
+}
+  h3 {
+  
+  font-size: 28px;
+}
 }

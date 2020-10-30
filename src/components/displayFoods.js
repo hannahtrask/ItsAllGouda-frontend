@@ -5,7 +5,6 @@ import '../scss/homepage.scss';
 import { Link } from 'react-router-dom';
 
 function Display(props) {
-	const [redirect, setRedirect] = useState(false);
 	const [foodId, setFoodId] = useState('');
 	const url = 'https://its-all-gouda-backend.herokuapp.com/gouda';
 
@@ -15,7 +14,6 @@ function Display(props) {
 		fetch(url + '/foods/' + food._id, {
 			method: 'delete',
 		})
-			.then(() => setRedirect(true))
 			.then(() => loaded())
 			.then(() => window.location.reload());
 	};
@@ -44,10 +42,10 @@ function Display(props) {
 						<div key={food._id}>
 							<Card className='cards'>
 								<Card.Body style={{ width: '18rem' }}>
-									<Card.Title>{food.name}</Card.Title>
-									<Card.Subtitle>Author: {food.author}</Card.Subtitle>
-									<Card.Text>{food.description}</Card.Text>
-									<Card.Img
+									<Card.Title className="cardtitle">{food.name}</Card.Title>
+									<Card.Subtitle className="cardauthor"><span>Author:</span>{food.author}</Card.Subtitle>
+									<Card.Text className="carddesc">{food.description}</Card.Text>
+									<Card.Img className="cardimg"
 										src={food.img}
 										alt='foods displayed on page'></Card.Img>
 									<Link to={`/edit/${food._id}`}>

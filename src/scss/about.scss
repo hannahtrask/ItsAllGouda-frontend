@@ -1,3 +1,5 @@
+@import './config';
+
 .about {
   display: flex;
   flex-direction: column;
@@ -6,22 +8,19 @@
   height: 100%;
 }
 
-.aboutp {
-  color: #f7fff7;
-  
-}
-
 .what {
   font-family: "Sigmar One", cursive;
   color: #ffe66d;
 }
-.bread {
+.aboutp {
+  color: $mintCream; 
+}
+.aboutp2 {
   color: #ff6b6b;
 }
 
 .footer{
   bottom: 0;
-  // position: absolute;
 }
 
 @media screen and (min-width: 768px) {
@@ -34,17 +33,24 @@
     font-size: 30px;
     padding: 20px;
   }
+  .aboutp2 {
+    font-size: 30px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
+  .what {
+    text-align: center;
+    font-size: 40px;
+  }
   .aboutp {
     margin: 70px;
     font-size: 35px;
     padding: 40px;
     margin-bottom: 150px;
   }
-  .what {
-    text-align: center;
-    font-size: 40px;
+   .aboutp2 {
+    font-size: 35px;
   }
+
 }
