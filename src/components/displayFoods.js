@@ -29,7 +29,7 @@ function Display(props) {
 		<div className='Display'>
 			<h1 className='moodName'>{mood[0].name}</h1>
 			<button className='MoodFood'>
-				<Link to='/create'>Add Your Mood Food!</Link>
+				<Link to='/create'className="addfood">Add Your Mood Food!</Link>
 			</button>
 			<div
 				style={{
