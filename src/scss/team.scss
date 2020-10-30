@@ -42,7 +42,6 @@ div.chaseandgals {
 }
 
 @media screen and (max-width: 767px) {
-  
   #chaseandgals {
     text-align: center;
   }
@@ -54,20 +53,49 @@ div.chaseandgals {
   }
   #kilahbox {
     text-align: right;
+    padding: 0px;
   }
   .kp {
     float: left;
+    text-align: justify;
   }
-  .hp{
+  .hp {
     float: right;
   }
   #chasebox {
     text-align: right;
   }
-  .cp{
+  .cp {
     float: left;
+    text-align: justify;
   }
-  .sp{
+  .sp {
     float: right;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #chaseandgals {
+    margin: 0 240px 50px 240px;
+  }
+
+  .sara {
+    height: 280px;
+    width: 280px;
+  }
+
+  .hannah {
+    height: 280px;
+    width: 280px;
+  }
+
+  .chase {
+    height: 280px;
+    width: 280px;
+  }
+
+  .kilah {
+    height: 280px;
+    width: 280px;
   }
 }
