@@ -5,7 +5,6 @@ import '../scss/homepage.scss';
 import { Link } from 'react-router-dom';
 
 function Display(props) {
-	const [redirect, setRedirect] = useState(false);
 	const [foodId, setFoodId] = useState('');
 	const url = 'https://its-all-gouda-backend.herokuapp.com/gouda';
 
@@ -15,7 +14,6 @@ function Display(props) {
 		fetch(url + '/foods/' + food._id, {
 			method: 'delete',
 		})
-			.then(() => setRedirect(true))
 			.then(() => loaded())
 			.then(() => window.location.reload());
 	};

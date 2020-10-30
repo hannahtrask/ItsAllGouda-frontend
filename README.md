@@ -5,7 +5,7 @@
 
  - [Github Frontend link](https://github.com/hannahtrask/UNIT3-frontend)
  - [Github Backend Link](https://github.com/hannahtrask/UNIT3-backend)
- - [Live Project on Netlify](live project link on netlify)
+ - [Netlify Link](https://its-all-gouda-frontend.netlify.app/)
 
 ## Project Description
 
@@ -82,24 +82,25 @@ Below is a link to our wireframe, we'll adjust this to be responsive as we devel
 
 | Component | Priority | Estimated Time | Actual Time |
 | --- | :---: |  :---:  | :---: |
-| About            | h | 4  | x   |
-| Meet the Team    | h | 4  | x   |
-| Display          | h | 7  | x   |
-| NavBar(?)        | l | 5  | x   |
-| Create Food Form | h | 8  | x   |
-| Mood Form        | h | 8  | x   |
-| Total            | h | 36 | x   |
+| About            | h | 4  | 1   |
+| Meet the Team    | h | 4  | 4   |
+| Display          | h | 7  | 10   |
+| NavBar(?)        | l | 5  | 5   |
+| Create Food Form | h | 8  | 12  |
+| Edit Food Form   | h | 8  | 8  |
+| CRUD Functions   | h | 6  | 8 |
+| Total            | h | 36 | 48  |
 
 | Task | Priority | Estimated Time | Actual Time |
 | --- | :---: |  :---:  | :---: |
-| React skeleton                     | h | 5  | x   |
-| Mobile-first style                 | h | 6  | x   |
-| Install dependencies               | h | 3  | x   |
-| Install/research libraries         | h | 5  | x   |
-| Fetch/Axios/AJAX call(s)           | l | 6  | x   |
-| Media-queries                      | h | 4  | x   |
-| Deploy to Netlify                  | h | 3  | x   |
-| Total                              | h | 32 | x   |
+| React skeleton                     | h | 5  | 3   |
+| Mobile-first style                 | h | 6  | 6   |
+| Install dependencies               | h | 3  | 1   |
+| Install/research libraries         | h | 5  | 4   |
+| Fetch/Axios/AJAX call(s)           | l | 6  | 6   |
+| Media-queries                      | h | 4  | 4   |
+| Deploy to Netlify                  | h | 3  | 1.5 |
+| Total                              | h | 32 | 25.5|
     
  ### Post MVP
  
@@ -112,16 +113,17 @@ Below is a link to our wireframe, we'll adjust this to be responsive as we devel
   
 | Task | Priority | Estimated Time | Actual Time |
 | --- | :---: |  :---: | :---: |
-| My Plate Component | m | 5  | x  |
-| Additional Library | l | 3  | x  |
-| Fun Animations     | l | 4  | x  |
-| Total              | h | 12 | x  |
+| My Plate Component | m | 5  | n/a  |
+| Additional Library | l | 3  | 4  |
+| Fun Animations     | l | 4  | 2  |
+| Total              | h | 12 | 6  |
 
 ## Additional Libraries
 
   - [Contentful](https://www.contentful.com/get-started/)
   - [React Bootstrap](https://react-bootstrap.github.io/)
   - [Sass](https://sass-lang.com/)
+  - [Framer Motion](https://www.framer.com/motion/)
 
 ## Code Snippet
 
