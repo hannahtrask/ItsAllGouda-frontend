@@ -6,9 +6,7 @@ import { Redirect } from 'react-router';
 import { Link } from 'react-router-dom';
 
 function CreateForm(props) {
-	const url = 'http://localhost:4000/gouda';
-	// const url = 'https://its-all-gouda-backend.herokuapp.com/gouda';
-	console.log(props);
+	const url = 'https://its-all-gouda-backend.herokuapp.com/gouda';
 	const [redirect, setRedirect] = useState(false);
 
 	const [state, setState] = useState({
@@ -26,8 +24,6 @@ function CreateForm(props) {
 		event.preventDefault();
 		handleEdit();
 	};
-
-	//.put('/foods/:id',
 
 	const handleEdit = () => {
 		fetch(url + '/foods/' + state.mood, {

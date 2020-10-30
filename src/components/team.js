@@ -32,7 +32,7 @@ const Team = () => {
             border="0"
           />
           <p className="kp">
-            As a lifelong dancer, Kilah’s jam <br />
+            A lifelong dancer, Kilah’s jam <br />
             is art in any form -
             <br />
             especially when it pushes limits.
@@ -48,9 +48,9 @@ const Team = () => {
             <br />
             <br />
             Backend balling aside, Kilah loved bringing
-            <br /> a ‘voice’ to the team’s app. Give those food descriptions
+            <br /> a ‘voice’ to the team’s app. When you give those food descriptions
             <br />
-            and ‘about the app’ a read. She hopes they make you smile.
+            and ‘about the app’ a read, she hopes they make you smile.
           </p>
         </motion.div>
       </div>

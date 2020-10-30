@@ -120,12 +120,65 @@ Below is a link to our wireframe, we'll adjust this to be responsive as we devel
 ## Additional Libraries
 
   - [Contentful](https://www.contentful.com/get-started/)
-  - [additional library](additional library link)
+  - [React Bootstrap](https://react-bootstrap.github.io/)
+  - [Sass](https://sass-lang.com/)
 
 ## Code Snippet
 
-here's a code snippet or two we're all really proud of
+This shows how we mapped over the mood to display all associated foods.
 
-```
-code snippet
+```javascript
+	const loaded = () => (
+		<div className='Display'>
+			<h1 className='moodName'>{mood[0].name}</h1>
+			<button className='MoodFood'>
+				<Link to='/create'>Add Your Mood Food!</Link>
+			</button>
+			<div
+				style={{
+					display: 'flex',
+					flexDirection: 'row',
+					justifyContent: 'space-around',
+					flexWrap: 'wrap',
+					margin: '20px',
+				}}>
+				{mood[0].foods.map((food) => {
+					return (
+						<div key={food._id}>
+							<Card className='cards'>
+								<Card.Body style={{ width: '18rem' }}>
+									<Card.Title>{food.name}</Card.Title>
+									<Card.Subtitle>Author: {food.author}</Card.Subtitle>
+									<Card.Text>{food.description}</Card.Text>
+									<Card.Img
+										src={food.img}
+										alt='foods displayed on page'></Card.Img>
+									<Link to={`/edit/${food._id}`}>
+										<button
+											type='button'
+											onClick={() => {
+												handleEditFood(food._id);
+											}}
+											className='EditDelete'>
+											Edit
+										</button>
+									</Link>
+									<button
+										type='button'
+										className='EditDelete'
+										onClick={() => {
+											deleteFood(food);
+										}}>
+										Delete
+									</button>
+								</Card.Body>
+							</Card>
+						</div>
+					);
+				})}
+			</div>
+		</div>
+	);
+	const loading = <h1>Loading...</h1>;
+	return mood.length > 0 ? loaded() : loading;
 ```

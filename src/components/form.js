@@ -2,20 +2,18 @@ import React, { useState } from 'react';
 import '../scss/form.scss';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import { Redirect } from 'react-router';
 import { Link } from 'react-router-dom';
 
 function CreateForm(props) {
-	const url = 'http://localhost:4000/gouda';
-	// const url = 'https://its-all-gouda-backend.herokuapp.com/gouda';
-	const [redirect, setRedirect] = useState(false);
 
 	const [state, setState] = useState({
 		mood: 'Happy',
+		author: '',
 		name: '',
 		course: '',
 		img: '',
 		description: '',
+		foodId: props.match.params.id,
 	});
 
 	const handleChange = (event) => {
@@ -27,67 +25,66 @@ function CreateForm(props) {
 		props.history.push('/');
 	};
 
-	// const handleSubmit = (event) => {
-	// 	event.preventDefault();
-	// 	handleCreate();
-	// };
-
-	// const handleCreate = () => {
-	// 	fetch(url + '/moods/' + state.mood, {
-	// 		method: 'put',
-	// 		headers: {
-	// 			'Content-Type': 'application/json',
-	// 		},
-	// 		body: JSON.stringify(state),
-	// 	}).then(() => setRedirect(true));
-	// };
-
-	// if (!redirect) {
 	return (
 		<div className='form'>
 			<h1 className='addmood'>Add Mood Food</h1>
 			<Form onSubmit={handleSubmit} className='form'>
 				<Form.Group controlId='exampleForm.ControlSelect1'>
-					<Form.Label>How you Feelin'?</Form.Label>
+					<Form.Label className="formsub">How you Feelin'?</Form.Label>
 					<br />
-					<Form.Control name='mood' as='select' onChange={handleChange}>
+					<br />
+					<Form.Control className="dropdown" name='mood' as='select' onChange={handleChange}>
 						<option>Happy</option>
 						<option>Blue</option>
-						<option>Moody</option>
+						<option>Sassy</option>
+						<option>Mad</option>
+						<option>Punchy</option>
 					</Form.Control>
+					<br />
+					<br />
 				</Form.Group>
 				<Form.Group controlId='exampleForm.ControlInput1'>
-					<Form.Control
+					<Form.Control className="foodname"
 						type='text'
 						name='name'
-						placeholder='Type of Food'
+						placeholder='Food Name'
 						onChange={handleChange}
 					/>
 				</Form.Group>
 				<Form.Group controlId='exampleForm.ControlInput1'>
-					<Form.Control
+					<Form.Control className="author"
+						type='text'
+						name='author'
+						placeholder='Author'
+						onChange={handleChange}
+					/>
+				</Form.Group>
+				<Form.Group controlId='exampleForm.ControlInput1'>
+					<Form.Control className="course"
 						type='text'
 						name='course'
-						placeholder='Type of Food'
+						placeholder='Course'
 						onChange={handleChange}
 					/>
 				</Form.Group>
 				<Form.Group controlId='exampleForm.ControlInput1'>
-					<Form.Control
-						type='text'
-						name='img'
-						placeholder='image link'
-						onChange={handleChange}
-					/>
-				</Form.Group>
-				<Form.Group controlId='exampleForm.ControlInput1'>
-					<Form.Control
+					<Form.Control className="description"
 						type='text'
 						name='description'
-						placeholder='description'
+						placeholder='Description'
 						onChange={handleChange}
 					/>
 				</Form.Group>
+				<Form.Group controlId='exampleForm.ControlInput1'>
+					<Form.Control className="imagelink"
+						type='text'
+						name='img'
+						placeholder='Image Link'
+						onChange={handleChange}
+					/>
+				</Form.Group>
+				<br />
+				<br />
 				<Button
 					className='mt-2'
 					type='submit'
@@ -96,20 +93,19 @@ function CreateForm(props) {
 					block>
 					{props.label}
 				</Button>
+				<br />
+				<br />
 				<Button
 					className='mt-2'
 					type='submit'
 					variant='primary'
 					size='sm'
 					block>
-					<Link to='/'>Back to Mood</Link>
+					<Link to='/'className="backtomood">Back to Mood</Link>
 				</Button>
 			</Form>
 		</div>
 	);
-	// } else {
-	// 	return <Redirect to='/' />;
-	// }
 }
 
 export default CreateForm;

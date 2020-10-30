@@ -7,9 +7,7 @@ import { Link } from 'react-router-dom';
 function Display(props) {
 	const [redirect, setRedirect] = useState(false);
 	const [foodId, setFoodId] = useState('');
-
-	const url = 'http://localhost:4000/gouda';
-	// const url = 'https://its-all-gouda-backend.herokuapp.com/gouda';
+	const url = 'https://its-all-gouda-backend.herokuapp.com/gouda';
 
 	const { mood } = props;
 
@@ -31,7 +29,7 @@ function Display(props) {
 		<div className='Display'>
 			<h1 className='moodName'>{mood[0].name}</h1>
 			<button className='MoodFood'>
-				<Link to='/create'>Add Your Mood Food!</Link>
+				<Link to='/create'className="addfood">Add Your Mood Food!</Link>
 			</button>
 			<div
 				style={{
@@ -46,13 +44,13 @@ function Display(props) {
 						<div key={food._id}>
 							<Card className='cards'>
 								<Card.Body style={{ width: '18rem' }}>
-									<Card.Title>{food.name}</Card.Title>
-									<Card.Subtitle>Author: {food.author}</Card.Subtitle>
-									<Card.Text>{food.description}</Card.Text>
-									<Card.Img
+									<Card.Title className="cardtitle">{food.name}</Card.Title>
+									<Card.Subtitle className="cardauthor"><span>Author:</span>{food.author}</Card.Subtitle>
+									<Card.Text className="carddesc">{food.description}</Card.Text>
+									<Card.Img className="cardimg"
 										src={food.img}
 										alt='foods displayed on page'></Card.Img>
-									<Link to='/edit'>
+									<Link to={`/edit/${food._id}`}>
 										<button
 											type='button'
 											onClick={() => {
