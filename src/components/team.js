@@ -162,9 +162,10 @@ const Team = () => {
             <br /> all the while hoping his code stays together
             <br /> long enough to show the project <br />
             at presentation time.
-            <br /> Finally getting to see individual foods being updated with{" "}
-            <br />
-            the form he created was a huge relief and moment of joy for Chase!
+            <br /> Finally getting to see individual <br />
+            foods being updated with <br />
+            the form he created was a <br />
+            huge relief and moment of joy for Chase!
           </p>
         </motion.div>
       </div>
