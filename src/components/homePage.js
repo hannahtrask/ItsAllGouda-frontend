@@ -25,7 +25,7 @@ function Home(props) {
 					<Form.Label className="formlabel">How you Feelin'?</Form.Label>
 					<br />
           <br />
-					<Form.Control as='select' onChange={handleChange}>
+					<Form.Control className="dropdown" as='select' onChange={handleChange}>
 						<option>Happy</option>
 						<option>Blue</option>
 						<option>Sassy</option>
