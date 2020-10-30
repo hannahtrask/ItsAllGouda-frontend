@@ -6,9 +6,7 @@
   box-sizing: border-box;
   padding: 20px;
 }
-.mt-2 {
-  font-family: "Open Sans", sans-serif;
-}
+
 .addmood {
   color: #ffe66d;
   font-family: "Sigmar One", cursive;
@@ -34,6 +32,24 @@
 .description {
   margin-bottom: 5px;
 }
+.mt-2 {
+  font-family: "Open Sans", sans-serif;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 15px;
+  color: #292f36; 
+  background-color: #ffe66d;
+  border-radius: 12px;
+}
+.backtomood {
+  text-decoration: none;
+  font-size: 15px;
+  color: #292f36;
+  background-color: #ffe66d;
+  border-radius: 12px;
+}
+
+
 @media screen and (min-width: 768px) {
   .form {
    min-height: 400px;
@@ -53,6 +69,12 @@
   .description {
     width: 300px;
 }
+  .mt-2 {
+    font-size: 20px;
+  }
+  .backtomood {
+    font-size: 20px;
+  }
 }
 @media screen and (min-width: 1440px) {
   .addmood{
@@ -79,12 +101,19 @@
 }
   .description {
     width: 400px;
+} 
+   .mt-2 {
+    font-size: 25px;
+  }
+  .backtomood {
+    font-size: 25px;
+  }
 }
+
 
 @media screen and (min-width: 2560px) {
   .form {
     min-height: 2000px;
     // margin-bottom: 600px;
   }
-}
 }

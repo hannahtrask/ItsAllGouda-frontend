@@ -33,7 +33,7 @@ function CreateForm(props) {
 					<Form.Label className="formsub">How you Feelin'?</Form.Label>
 					<br />
 					<br />
-					<Form.Control name='mood' as='select' onChange={handleChange}>
+					<Form.Control className="dropdown" name='mood' as='select' onChange={handleChange}>
 						<option>Happy</option>
 						<option>Blue</option>
 						<option>Sassy</option>
@@ -101,7 +101,7 @@ function CreateForm(props) {
 					variant='primary'
 					size='sm'
 					block>
-					<Link to='/'>Back to Mood</Link>
+					<Link to='/'className="backtomood">Back to Mood</Link>
 				</Button>
 			</Form>
 		</div>

@@ -4,5 +4,40 @@
 .cards {
   font-size: 16px;
   font-weight: bold;
+}
+.MoodFood {
+  padding: 10px;
+  font-weight: bold;
+  font-size: 15px;
+  background-color: #ff6b6b;
+  border: 1px solid #ff6b6b;
+  border-radius: 12px;
   
+}
+.addfood {
+  color:#f7fff7;
+  text-decoration: none;
+}
+.EditDelete {
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 12px;
+  background-color: #ffe66d;
+  color: #292f36;
+}
+
+@media screen and (min-width: 768px) {
+  .EditDelete {
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .MoodFood {
+    font-size: 18px;
+    font-weight: bolder;
+  }
+  .EditDelete {
+    font-size: 20px;
+  }
 }
